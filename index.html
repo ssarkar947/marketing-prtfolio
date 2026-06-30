@@ -3,226 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sourav Sarkar | AI & Software Engineer</title>
-    <meta name="description" content="AI Software Engineer with 11 years of experience. I build AI Agents, Web Apps, Mobile Apps, and Internal Software that automate business operations and scale operations.">
-    <!-- Google Fonts -->
+    <title>Sourav Sarkar | Brand Strategist & Growth Marketer</title>
+    <meta name="description" content="Brand strategist and growth marketer with 11+ years building brand identities, crafting strategic narratives, and driving measurable growth through performance marketing and AI automation.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <!-- Grid Overlay Background -->
-    <div class="grid-background"></div>
-    <div class="glow-effect"></div>
 
-    <!-- Navigation Header -->
-    <header class="site-header">
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursor-glow"></div>
+
+    <!-- Noise texture overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <header class="site-header" id="site-header">
         <div class="header-container">
             <div class="logo">
-                <span class="logo-text">SOURAV SARKAR</span>
+                <span class="logo-text">Sourav Sarkar</span>
                 <span class="status-badge">
                     <span class="status-dot"></span>
-                    <span class="status-text">Available for Projects</span>
+                    <span class="status-text">Open to Projects</span>
                 </span>
             </div>
             <nav class="main-nav">
-                <a href="#work" class="nav-link">Selected Work</a>
+                <a href="#work" class="nav-link">Work</a>
                 <a href="#expertise" class="nav-link">Expertise</a>
-                <a href="#contact" class="nav-link btn-contact-nav">Get in Touch</a>
+                <a href="#contact" class="nav-link btn-contact-nav">Let's Talk</a>
             </nav>
         </div>
     </header>
 
-    <main class="container">
-        <!-- Hero Section -->
-        <section class="hero-section">
+    <main>
+        <!-- ========== HERO ========== -->
+        <section class="container hero-section">
+            <!-- Decorative shapes -->
+            <div class="hero-deco hero-deco-circle"></div>
+            <div class="hero-deco hero-deco-circle-2"></div>
+            <div class="hero-deco hero-deco-gradient"></div>
+
             <div class="hero-grid">
                 <div class="hero-content">
-                    <div class="mono-tag">// AI & SOFTWARE ENGINEERING</div>
-                    <h1 class="hero-title">I build software that automates operations and helps businesses scale.</h1>
+                    <div class="tag">Brand Strategy & Growth</div>
+                    <h1 class="hero-title">
+                        I make brands <br>
+                        <span class="rotating-wrapper">
+                            <span class="rotating-text">
+                                <span class="accent-text">unforgettable.</span>
+                                <span class="accent-text">profitable.</span>
+                                <span class="accent-text">human.</span>
+                                <span class="accent-text">unforgettable.</span>
+                            </span>
+                        </span>
+                    </h1>
                     <p class="hero-subtitle">
-                        11 years of experience designing AI agents, custom web apps, mobile apps, and internal business tools. I focus on understanding your business bottlenecks and building software that solves them.
+                        11 years bridging storytelling with performance marketing. I position brands, craft campaigns, and build AI systems that convert attention into growth.
                     </p>
                     <div class="hero-actions">
-                        <a href="#work" class="btn btn-primary">View Selected Work</a>
-                        <a href="#contact" class="btn btn-secondary">Discuss a Project</a>
+                        <a href="#work" class="btn btn-primary">
+                            See My Work
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">Start a Conversation</a>
                     </div>
                 </div>
                 <div class="hero-image-container">
                     <div class="hero-image-frame">
                         <img src="profile.jpg" alt="Sourav Sarkar" class="hero-image">
                         <div class="hero-image-overlay">
-                            <span class="overlay-label">SOURAV SARKAR // AI ENG</span>
+                            <span class="overlay-label">STRATEGIST // KOLKATA</span>
                         </div>
                     </div>
+                    <!-- Floating badges -->
+                    <div class="hero-float-badge float-badge-1">
+                        <span class="badge-icon">◆</span> Brand Strategy
+                    </div>
+                    <div class="hero-float-badge float-badge-2">
+                        <span class="badge-icon">◆</span> Performance Ads
+                    </div>
+                    <div class="hero-float-badge float-badge-3">
+                        <span class="badge-icon">◆</span> AI Automation
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Statistics Dashboard -->
-        <section class="stats-section">
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-num" data-val="11">11</div>
-                    <div class="stat-label">Years of experience solving business bottlenecks</div>
+        <!-- ========== BRAND MARQUEE ========== -->
+        <section class="marquee-section">
+            <div class="marquee-track" id="marquee-track">
+                <span class="marquee-item">Mother's Kitchen</span>
+                <span class="marquee-item">Badabon Harvest</span>
+                <span class="marquee-item">Bastratantra</span>
+                <span class="marquee-item">Nail Story</span>
+                <span class="marquee-item">NEWS</span>
+                <span class="marquee-item">Smile Health Dental</span>
+                <span class="marquee-item">Sapiyo</span>
+                <span class="marquee-item">Hudson Valley Swim</span>
+                <span class="marquee-item">Banglar Swad</span>
+                <span class="marquee-item">Gomata Originals</span>
+                <span class="marquee-item">Shavi Homes</span>
+                <span class="marquee-item">Asian Paints</span>
+                <span class="marquee-item">GoDaddy Academy</span>
+                <!-- duplicated for seamless loop -->
+                <span class="marquee-item">Mother's Kitchen</span>
+                <span class="marquee-item">Badabon Harvest</span>
+                <span class="marquee-item">Bastratantra</span>
+                <span class="marquee-item">Nail Story</span>
+                <span class="marquee-item">NEWS</span>
+                <span class="marquee-item">Smile Health Dental</span>
+                <span class="marquee-item">Sapiyo</span>
+                <span class="marquee-item">Hudson Valley Swim</span>
+                <span class="marquee-item">Banglar Swad</span>
+                <span class="marquee-item">Gomata Originals</span>
+                <span class="marquee-item">Shavi Homes</span>
+                <span class="marquee-item">Asian Paints</span>
+                <span class="marquee-item">GoDaddy Academy</span>
+            </div>
+        </section>
+
+        <!-- ========== STATS INFOGRAPHIC ========== -->
+        <section class="stats-section container scroll-reveal" id="stats-section">
+            <!-- SVG gradient for rings -->
+            <svg width="0" height="0" style="position:absolute;">
+                <defs>
+                    <linearGradient id="ring-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#D4A574"/>
+                        <stop offset="100%" stop-color="#E8845C"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+
+            <div class="stats-grid stagger-reveal" id="stats-grid">
+                <div class="stat-card" data-ring-pct="100">
+                    <div class="stat-ring">
+                        <svg viewBox="0 0 90 90">
+                            <circle class="stat-ring-bg" cx="45" cy="45" r="40"/>
+                            <circle class="stat-ring-fill" cx="45" cy="45" r="40"/>
+                        </svg>
+                        <span class="stat-ring-value" data-val="11">0</span>
+                    </div>
+                    <div class="stat-label">Years of brand strategy & paid media experience</div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-num" data-val="47">47+</div>
-                    <div class="stat-label">Production-ready systems delivered</div>
+                <div class="stat-card" data-ring-pct="80">
+                    <div class="stat-ring">
+                        <svg viewBox="0 0 90 90">
+                            <circle class="stat-ring-bg" cx="45" cy="45" r="40"/>
+                            <circle class="stat-ring-fill" cx="45" cy="45" r="40"/>
+                        </svg>
+                        <span class="stat-ring-value" data-val="20" data-suffix="+">0</span>
+                    </div>
+                    <div class="stat-label">Brands built, positioned, and scaled across industries</div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-num" data-val="15">15M+</div>
-                    <div class="stat-label">Revenue influenced for brands and businesses</div>
+                <div class="stat-card" data-ring-pct="52">
+                    <div class="stat-ring">
+                        <svg viewBox="0 0 90 90">
+                            <circle class="stat-ring-bg" cx="45" cy="45" r="40"/>
+                            <circle class="stat-ring-fill" cx="45" cy="45" r="40"/>
+                        </svg>
+                        <span class="stat-ring-value" data-val="13" data-suffix="%">0</span>
+                    </div>
+                    <div class="stat-label">Average lead drop reduction via AI-driven workflows</div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-num" data-val="738">738+</div>
-                    <div class="stat-label">Hours of manual operational work saved</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-num" data-val="13">13</div>
-                    <div class="stat-label">Custom AI agents and workflows built</div>
+                <div class="stat-card" data-ring-pct="40">
+                    <div class="stat-ring">
+                        <svg viewBox="0 0 90 90">
+                            <circle class="stat-ring-bg" cx="45" cy="45" r="40"/>
+                            <circle class="stat-ring-fill" cx="45" cy="45" r="40"/>
+                        </svg>
+                        <span class="stat-ring-value" data-val="4">0</span>
+                    </div>
+                    <div class="stat-label">International markets served — India, US, UK, Canada</div>
                 </div>
             </div>
         </section>
 
-        <!-- Selected Work (Portfolio) -->
-        <section id="work" class="work-section scroll-reveal">
+        <!-- ========== SELECTED CASE STUDIES ========== -->
+        <section id="work" class="container work-section scroll-reveal">
             <div class="section-header">
                 <div>
-                    <div class="mono-tag">// CASE STUDIES</div>
-                    <h2 class="section-title">Selected Projects</h2>
+                    <div class="tag">Selected Work</div>
+                    <h2 class="section-title">Case Studies</h2>
                 </div>
-                <!-- Filtering tabs -->
                 <div class="filter-tabs">
-                    <button class="filter-btn active" data-filter="all">All Systems</button>
-                    <button class="filter-btn" data-filter="ai">AI & Automation</button>
-                    <button class="filter-btn" data-filter="web">Web Applications</button>
-                    <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
-                    <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="brand">Brand Strategy</button>
+                    <button class="filter-btn" data-filter="ads">Performance</button>
+                    <button class="filter-btn" data-filter="ngo">Social Impact</button>
+                    <button class="filter-btn" data-filter="ai">AI Systems</button>
                 </div>
             </div>
 
-            <div class="project-grid">
-                <!-- Project: LeadCall AI -->
-                <div class="project-card" data-category="ai">
-                    <div class="project-header">
-                        <span class="project-client">Creative Creation Interior</span>
-                        <span class="tech-badge">n8n</span>
-                    </div>
-                    <h3 class="project-title">LeadCall AI</h3>
-                    <div class="project-tag">AI Lead Qualification System</div>
-                    <p class="project-desc">
-                        Problem: High lead drop-off rates due to delayed response times from sales representatives. 
-                        Solution: Built an automated AI-driven lead qualification engine that initiates direct phone calls to leads immediately upon form submission, qualifying prospects before handover.
-                    </p>
-                    <div class="project-outcome">
-                        <div class="outcome-title">Outcome:</div>
-                        <ul class="outcome-list">
-                            <li>Reduced lead drop-off by 13% in the very first month.</li>
-                            <li>Fully automated early-stage lead qualification pipeline.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Project: Badabon Harvest -->
-                <div class="project-card" data-category="web mobile ecommerce">
-                    <div class="project-header">
-                        <span class="project-client">Badabon Farmers Producer Co.</span>
-                        <span class="tech-badge">Node.js</span>
-                    </div>
-                    <h3 class="project-title">Badabon Harvest</h3>
-                    <div class="project-tag">Supply Chain & E-commerce Platform</div>
-                    <p class="project-desc">
-                        Problem: Scattered inventory, lack of structured billing, and inefficient logistics between rural farmers and direct consumers.
-                        Solution: Engineered an end-to-end digital ecosystem including a public e-commerce store, a dedicated Android app for field staff, and a custom backend for inventory, billing, and farmer stock management.
-                    </p>
-                    <div class="project-outcome">
-                        <div class="outcome-title">Outcome:</div>
-                        <ul class="outcome-list">
-                            <li>Streamlined supply chain logistics and billing processes.</li>
-                            <li>Direct digital access to market for farming communities.</li>
-                        </ul>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://badabonharvest.in/" target="_blank" rel="noopener" class="project-link-btn">
-                            Visit Site 
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project: Bastratantra -->
-                <div class="project-card" data-category="web ecommerce">
-                    <div class="project-header">
-                        <span class="project-client">Webong Creations</span>
-                        <span class="tech-badge">PHP</span>
-                    </div>
-                    <h3 class="project-title">Bastratantra</h3>
-                    <div class="project-tag">Custom E-commerce Platform</div>
-                    <p class="project-desc">
-                        Problem: The client needed a lightweight, custom e-commerce solution to sell themed graphic apparel with highly optimized load times and custom checkout pathways.
-                        Solution: Developed a lean, custom PHP-based online store from scratch, focused on high conversion and low server overhead.
-                    </p>
-                    <div class="project-outcome">
-                        <div class="outcome-title">Outcome:</div>
-                        <ul class="outcome-list">
-                            <li>Operated continuously for over six years.</li>
-                            <li>Consistently maintains operational profitability with zero downtime.</li>
-                        </ul>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://www.bastratantra.com" target="_blank" rel="noopener" class="project-link-btn">
-                            Visit Site
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project: Nail Story -->
-                <div class="project-card" data-category="web">
-                    <div class="project-header">
-                        <span class="project-client">Nail Story</span>
-                        <span class="tech-badge">Custom Stack</span>
-                    </div>
-                    <h3 class="project-title">Nail Story</h3>
-                    <div class="project-tag">Business Website & Booking Software</div>
-                    <p class="project-desc">
-                        Problem: Salon chain needed a unified public website combined with a secure backend system to handle client scheduling, service billing, and inventory.
-                        Solution: Developed the public portal alongside a custom-built booking engine and billing ledger designed specifically for high-frequency retail transactions.
-                    </p>
-                    <div class="project-outcome">
-                        <div class="outcome-title">Outcome:</div>
-                        <ul class="outcome-list">
-                            <li>Successfully deployed across multiple salon locations.</li>
-                            <li>Reduced booking errors and streamlined daily financial reporting.</li>
-                        </ul>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://nailstory.in" target="_blank" rel="noopener" class="project-link-btn">
-                            Visit Site
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project: Mother's Kitchen -->
-                <div class="project-card" data-category="web ecommerce">
+            <div class="project-grid stagger-reveal">
+                <!-- Mother's Kitchen -->
+                <div class="project-card" data-category="brand ads">
                     <div class="project-header">
                         <span class="project-client">Mother's Kitchen LLP</span>
-                        <span class="tech-badge">MERN Stack</span>
+                        <span class="tech-badge">D2C</span>
                     </div>
                     <h3 class="project-title">Mother's Kitchen</h3>
-                    <div class="project-tag">D2C Brand & E-commerce Platform</div>
+                    <div class="project-tag">Brand Positioning & D2C Growth</div>
                     <p class="project-desc">
-                        Problem: Brand wanted an e-commerce platform that didn't just sell snacks, but effectively integrated a narrative-driven emotional story of mother-daughter recipes.
-                        Solution: Built a highly visual, fast-loading MERN (MongoDB, Express, React, Node.js) stack store with rich storytelling layouts and seamless checkout.
+                        <strong>Challenge:</strong> Launching a healthy snack brand in a saturated D2C market.
+                        <br><br>
+                        <strong>Strategy:</strong> Positioned the brand around a mother-daughter recipe narrative. Deployed multi-channel campaigns connecting this emotional story to health-conscious families.
                     </p>
                     <div class="project-outcome">
-                        <div class="outcome-title">Outcome:</div>
+                        <div class="outcome-title">Outcome</div>
                         <ul class="outcome-list">
-                            <li>Launched successfully with highly positive customer engagement.</li>
-                            <li>Smooth integration of brand narrative and shopping workflows.</li>
+                            <li>Built a clear, recognizable D2C identity from scratch</li>
+                            <li>Emotional storytelling integrated into profitable acquisition funnels</li>
                         </ul>
                     </div>
                     <div class="project-links">
@@ -233,160 +224,321 @@
                     </div>
                 </div>
 
-                <!-- Project: BirdTrails -->
-                <div class="project-card" data-category="mobile">
+                <!-- NEWS -->
+                <div class="project-card" data-category="brand ngo">
                     <div class="project-header">
                         <span class="project-client">Nature Environment & Wildlife Society</span>
-                        <span class="tech-badge">Android</span>
+                        <span class="tech-badge">NGO</span>
                     </div>
-                    <h3 class="project-title">BirdTrails</h3>
-                    <div class="project-tag">Conservation Mobile Application</div>
+                    <h3 class="project-title">Conservation Storytelling</h3>
+                    <div class="project-tag">Public Engagement & Communication</div>
                     <p class="project-desc">
-                        Problem: Field researchers and conservationists needed an offline-first tool to log bird species observations and map tracking trails in remote regions.
-                        Solution: Designed and built an Android application capable of local offline logging, trail coordinate tracking, and automatic sync once network connectivity is restored.
+                        <strong>Challenge:</strong> Making complex conservation projects — mangrove restoration, bee conservation, tiger landscapes — accessible to donors and the public.
+                        <br><br>
+                        <strong>Strategy:</strong> Led campaign storytelling around women-led restoration and sustainable agriculture. Created bridges between local community action and global impact narratives.
                     </p>
                     <div class="project-outcome">
-                        <div class="outcome-title">Outcome:</div>
+                        <div class="outcome-title">Outcome</div>
                         <ul class="outcome-list">
-                            <li>Actively used in remote field tracking operations.</li>
-                            <li>Significantly improved speed and accuracy of logging ecological data.</li>
+                            <li>Strengthened stakeholder and donor communications</li>
+                            <li>High-visibility public awareness campaigns for biological landscapes</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Project: Mangrove Watch -->
-                <div class="project-card" data-category="mobile">
+                <!-- Badabon Harvest -->
+                <div class="project-card" data-category="brand ads">
                     <div class="project-header">
-                        <span class="project-client">Nature Environment & Wildlife Society</span>
-                        <span class="tech-badge">Android</span>
+                        <span class="project-client">Badabon Harvest</span>
+                        <span class="tech-badge">Social Enterprise</span>
                     </div>
-                    <h3 class="project-title">Mangrove Watch</h3>
-                    <div class="project-tag">Surveillance Mobile Application</div>
+                    <h3 class="project-title">Badabon Harvest</h3>
+                    <div class="project-tag">Farmer-Owned Brand & Digital Growth</div>
                     <p class="project-desc">
-                        Problem: Monitoring vast mangrove territories was slow and lacked verifiable geolocation data.
-                        Solution: Developed a secure, offline-capable Android application built around geotagged field observations and photo verification.
+                        <strong>Challenge:</strong> Building a digital market presence for a farmer-owned food brand.
+                        <br><br>
+                        <strong>Strategy:</strong> Developed branding, value proposition, and digital campaigns highlighting sustainable agriculture and farmer empowerment to drive direct e-commerce sales.
                     </p>
                     <div class="project-outcome">
-                        <div class="outcome-title">Outcome:</div>
+                        <div class="outcome-title">Outcome</div>
                         <ul class="outcome-list">
-                            <li>Successfully deployed and actively used for environmental surveillance.</li>
-                            <li>Enables immediate reporting of illegal activities or ecological issues.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Project: Bengal Patachitra -->
-                <div class="project-card" data-category="web">
-                    <div class="project-header">
-                        <span class="project-client">Cornell University & Banglanatak</span>
-                        <span class="tech-badge">WordPress</span>
-                    </div>
-                    <h3 class="project-title">Bengal Patachitra</h3>
-                    <div class="project-tag">Cultural Heritage Platform</div>
-                    <p class="project-desc">
-                        Problem: Traditional Patachitra artists in rural Bengal lacked a digital presence to preserve, showcase, and promote their art forms.
-                        Solution: Created a cultural archive and digital gallery to catalog art styles, artist profiles, and historical context.
-                    </p>
-                    <div class="project-outcome">
-                        <div class="outcome-title">Outcome:</div>
-                        <ul class="outcome-list">
-                            <li>Delivered a highly accessible digital resource for international researchers.</li>
-                            <li>Provided direct exposure for rural artists to global audiences.</li>
+                            <li>Created recognizable brand identity centered on natural farming</li>
+                            <li>Built the digital marketing foundation for D2C sales growth</li>
                         </ul>
                     </div>
                     <div class="project-links">
-                        <a href="https://bengalpatachitra.com/" target="_blank" rel="noopener" class="project-link-btn">
+                        <a href="https://badabonharvest.in/" target="_blank" rel="noopener" class="project-link-btn">
                             Visit Site
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
                         </a>
                     </div>
                 </div>
 
-                <!-- Project: Raymangal Eco Resort -->
-                <div class="project-card" data-category="web">
+                <!-- Creative Creations -->
+                <div class="project-card" data-category="ads ai">
                     <div class="project-header">
-                        <span class="project-client">TDH Germany</span>
-                        <span class="tech-badge">PHP</span>
+                        <span class="project-client">Creative Creations Interior</span>
+                        <span class="tech-badge">Lead Gen</span>
                     </div>
-                    <h3 class="project-title">Raymangal Eco Resort</h3>
-                    <div class="project-tag">Tourism Platform</div>
+                    <h3 class="project-title">AI Lead Engine</h3>
+                    <div class="project-tag">Performance Marketing & AI Automation</div>
                     <p class="project-desc">
-                        Problem: Eco-resort in the remote Sundarbans had no digital footprint to connect with eco-conscious international travelers.
-                        Solution: Engineered a speed-optimized multilingual promotional website detailing local tours, conservation efforts, and bookings.
+                        <strong>Challenge:</strong> High lead drop-off from delayed response times.
+                        <br><br>
+                        <strong>Strategy:</strong> Built AI-powered workflows that automatically contact and qualify enquiries in real-time, before handing off to sales.
                     </p>
                     <div class="project-outcome">
-                        <div class="outcome-title">Outcome:</div>
+                        <div class="outcome-title">Outcome</div>
                         <ul class="outcome-list">
-                            <li>Successfully launched, opening marketing channels to international travelers.</li>
-                            <li>Built respect for localized community tourism structures.</li>
+                            <li>13% lead drop reduction in the very first month</li>
+                            <li>Fully automated early-stage qualification pipeline</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bastratantra -->
+                <div class="project-card" data-category="brand ads">
+                    <div class="project-header">
+                        <span class="project-client">Bastratantra</span>
+                        <span class="tech-badge">D2C</span>
+                    </div>
+                    <h3 class="project-title">Bastratantra</h3>
+                    <div class="project-tag">Cultural Lifestyle E-commerce</div>
+                    <p class="project-desc">
+                        <strong>Challenge:</strong> Building an online identity for a culturally themed lifestyle apparel brand.
+                        <br><br>
+                        <strong>Strategy:</strong> Engineered the brand's digital storytelling and ran sustained paid campaigns to establish it as a recognizable Bengali lifestyle identity.
+                    </p>
+                    <div class="project-outcome">
+                        <div class="outcome-title">Outcome</div>
+                        <ul class="outcome-list">
+                            <li>Built a distinct cultural brand presence and loyal following</li>
+                            <li>Developed long-term customer acquisition pathways</li>
+                        </ul>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://www.bastratantra.com" target="_blank" rel="noopener" class="project-link-btn">
+                            Visit Site
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Nail Story -->
+                <div class="project-card" data-category="brand ads ai">
+                    <div class="project-header">
+                        <span class="project-client">Nail Story</span>
+                        <span class="tech-badge">Retail</span>
+                    </div>
+                    <h3 class="project-title">Nail Story</h3>
+                    <div class="project-tag">Salon Chain Growth & Digital Booking</div>
+                    <p class="project-desc">
+                        <strong>Challenge:</strong> Driving local bookings and building brand equity for a growing salon chain.
+                        <br><br>
+                        <strong>Strategy:</strong> Led branding, creative communication, and targeted local performance marketing. Integrated custom booking and operational solutions.
+                    </p>
+                    <div class="project-outcome">
+                        <div class="outcome-title">Outcome</div>
+                        <ul class="outcome-list">
+                            <li>Drove client bookings and built localized digital brand equity</li>
+                            <li>Reduced booking friction and improved operational efficiency</li>
+                        </ul>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://nailstory.in" target="_blank" rel="noopener" class="project-link-btn">
+                            Visit Site
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kyptronix -->
+                <div class="project-card" data-category="brand ads ai">
+                    <div class="project-header">
+                        <span class="project-client">Kyptronix LLP</span>
+                        <span class="tech-badge">Agency</span>
+                    </div>
+                    <h3 class="project-title">Multi-Brand Growth</h3>
+                    <div class="project-tag">Head of Marketing — Agency Portfolio</div>
+                    <p class="project-desc">
+                        Led end-to-end marketing for national and international brands across D2C, healthcare, SaaS, fashion, and NGOs. Combined brand positioning with performance advertising and AI-driven nurturing to scale outcomes.
+                    </p>
+                    <div class="project-outcome">
+                        <div class="outcome-title">Disciplines</div>
+                        <ul class="outcome-list">
+                            <li>Brand strategy, positioning, and creative direction</li>
+                            <li>Performance media buying, analytics, and marketing automation</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Core Expertise & Philosophy -->
-        <section id="expertise" class="expertise-section scroll-reveal">
+        <!-- ========== ADDITIONAL BRANDS ========== -->
+        <section class="additional-brands-section scroll-reveal">
+            <div class="container">
+                <div class="additional-brands-intro">
+                    <div class="tag">Global Clients</div>
+                    <h2 class="section-title">More Brands I've Worked With</h2>
+                    <p style="margin-top:1rem;">Startups, D2C brands, NGOs, and international businesses across 4 countries.</p>
+                </div>
+
+                <div class="brands-grid stagger-reveal">
+                    <div class="brand-card">
+                        <div class="brand-card-top"><h3>Banglar Swad</h3><span class="brand-card-category">D2C Food</span></div>
+                        <p class="brand-card-desc">Brand identity and positioning celebrating Bengali food culture as a premium D2C experience.</p>
+                    </div>
+                    <div class="brand-card">
+                        <div class="brand-card-top"><h3>Gomata Originals</h3><span class="brand-card-category">D2C</span></div>
+                        <p class="brand-card-desc">Brand communication, positioning, and digital strategy to establish stronger online presence.</p>
+                    </div>
+                    <div class="brand-card">
+                        <div class="brand-card-top"><h3>Smile Health Dental</h3><span class="brand-card-category">Healthcare — Canada</span></div>
+                        <p class="brand-card-desc">Digital marketing for patient acquisition and brand credibility in Ottawa.</p>
+                    </div>
+                    <div class="brand-card">
+                        <div class="brand-card-top"><h3>Sapiyo</h3><span class="brand-card-category">B2B — UK</span></div>
+                        <p class="brand-card-desc">Localized branding and digital campaigns tailored for the UK market.</p>
+                    </div>
+                    <div class="brand-card">
+                        <div class="brand-card-top"><h3>Hudson Valley Swim</h3><span class="brand-card-category">Services — USA</span></div>
+                        <p class="brand-card-desc">Performance marketing to generate enquiries and enrollments in Westchester.</p>
+                    </div>
+                    <div class="brand-card">
+                        <div class="brand-card-top"><h3>Shavi Homes</h3><span class="brand-card-category">Real Estate — Canada</span></div>
+                        <p class="brand-card-desc">Branding and paid lead generation for the Canadian real estate market.</p>
+                    </div>
+                    <div class="brand-card">
+                        <div class="brand-card-top"><h3>Daksh NGO</h3><span class="brand-card-category">Social Impact</span></div>
+                        <p class="brand-card-desc">Communication strategies to amplify the organization's mission and impact.</p>
+                    </div>
+                    <div class="brand-card">
+                        <div class="brand-card-top"><h3>Desi Eats</h3><span class="brand-card-category">D2C Food</span></div>
+                        <p class="brand-card-desc">Branding and performance marketing for customer acquisition and awareness.</p>
+                    </div>
+                    <div class="brand-card">
+                        <div class="brand-card-top"><h3>Stylepop</h3><span class="brand-card-category">Fashion</span></div>
+                        <p class="brand-card-desc">Paid marketing campaigns to drive online growth and brand visibility.</p>
+                    </div>
+                    <div class="brand-card">
+                        <div class="brand-card-top"><h3>Aalo Boutique</h3><span class="brand-card-category">Fashion</span></div>
+                        <p class="brand-card-desc">Building a distinctive fashion identity and increasing customer engagement.</p>
+                    </div>
+                    <div class="brand-card">
+                        <div class="brand-card-top"><h3>Right Check LLC</h3><span class="brand-card-category">B2B — USA</span></div>
+                        <p class="brand-card-desc">Brand communication and lead generation for B2B digital presence.</p>
+                    </div>
+                    <div class="brand-card">
+                        <div class="brand-card-top"><h3>TasteBuddy</h3><span class="brand-card-category">D2C App</span></div>
+                        <p class="brand-card-desc">Branding and customer acquisition campaigns to strengthen digital presence.</p>
+                    </div>
+                </div>
+
+                <div class="collab-bar">
+                    <span class="collab-bar-label">Also Collaborated With</span>
+                    <span class="collab-bar-names">Asian Paints Color Prime · GoDaddy Academy · Merlin Projects · Whisper Paddles</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== EXPERTISE ========== -->
+        <section id="expertise" class="container expertise-section scroll-reveal">
             <div class="expertise-grid">
-                <!-- Column 1: Philosophy -->
                 <div class="philosophy-content">
-                    <div class="mono-tag">// CORE PHILOSOPHY</div>
-                    <h2 class="section-title">Software is only valuable when it solves operational bottlenecks.</h2>
+                    <div class="tag">My Approach</div>
+                    <h2 class="section-title">Stories sell. Systems scale. I do both.</h2>
                     <p class="philosophy-text">
-                        I don't write code for its own sake. I study your workflows, talk to your operators, identify friction points, and build practical solutions. 
+                        Great brands don't shout — they resonate. My work starts with understanding the human story behind a product. Then I build the systems to amplify that story at scale.
                     </p>
                     <p class="philosophy-text">
-                        Whether it is automating lead response times, linking supply chains from farm to shop, or digitizing manual booking processes, the priority is always building software that people actually use.
+                        Whether it's the emotional narrative of a mother's recipe, the urgency of mangrove conservation, or the cultural pride of a Bengali apparel line — the story is the strategy.
                     </p>
+
+                    <!-- Interactive Skill Bars -->
+                    <div class="skill-bars" id="skill-bars">
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header">
+                                <span class="skill-bar-name">Brand Strategy & Positioning</span>
+                                <span class="skill-bar-pct">95%</span>
+                            </div>
+                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header">
+                                <span class="skill-bar-name">Performance & Media Buying</span>
+                                <span class="skill-bar-pct">92%</span>
+                            </div>
+                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header">
+                                <span class="skill-bar-name">Campaign Storytelling</span>
+                                <span class="skill-bar-pct">90%</span>
+                            </div>
+                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header">
+                                <span class="skill-bar-name">AI & Marketing Automation</span>
+                                <span class="skill-bar-pct">85%</span>
+                            </div>
+                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header">
+                                <span class="skill-bar-name">Creative Direction</span>
+                                <span class="skill-bar-pct">88%</span>
+                            </div>
+                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+                        </div>
+                    </div>
+
                     <div class="industries-block">
-                        <div class="mono-tag">// INDUSTRIES WORKED WITH</div>
+                        <div class="tag">Industries</div>
                         <div class="industries-list">
-                            <span>E-commerce</span>
                             <span>D2C Brands</span>
-                            <span>Interior Design</span>
-                            <span>FMCG</span>
-                            <span>Tourism</span>
-                            <span>Conservation & NGOs</span>
-                            <span>Agriculture</span>
+                            <span>NGOs & Conservation</span>
+                            <span>SaaS & B2B</span>
+                            <span>Healthcare</span>
+                            <span>E-commerce</span>
                             <span>Beauty & Wellness</span>
-                            <span>Startups</span>
+                            <span>Real Estate</span>
+                            <span>Sustainable Agriculture</span>
+                            <span>Fashion</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Column 2: Tech & Systems -->
                 <div class="capabilities-content">
-                    <div class="mono-tag">// CAPABILITIES</div>
+                    <div class="tag">Capabilities</div>
                     
                     <div class="capability-item">
-                        <h3 class="capability-title">AI & Workflow Automation</h3>
-                        <p class="capability-desc">AI Agents, automated lead qualification, API integrations, and custom database operations via n8n and Node.js.</p>
+                        <h3 class="capability-title">Brand Strategy & Positioning</h3>
+                        <p class="capability-desc">Crafting unique identities, value propositions, and communication strategies that connect with audiences at an emotional level.</p>
                     </div>
-
                     <div class="capability-item">
-                        <h3 class="capability-title">Custom Web & Mobile</h3>
-                        <p class="capability-desc">High-performance applications built on MERN/React/PHP and offline-capable Android apps for field environments.</p>
+                        <h3 class="capability-title">Performance Marketing</h3>
+                        <p class="capability-desc">Customer acquisition campaigns across Meta and Google. Budget management, A/B testing, and ROAS optimization.</p>
                     </div>
-
                     <div class="capability-item">
-                        <h3 class="capability-title">Internal Business Software</h3>
-                        <p class="capability-desc">ERP customization, CRMs, inventory tracking, billing engines, and supply chain management dashboards.</p>
+                        <h3 class="capability-title">AI-Driven Automation</h3>
+                        <p class="capability-desc">Custom lead-nurturing pipelines and API integrations via n8n to reduce sales latency and improve conversion.</p>
                     </div>
 
                     <div class="tech-stack-container">
-                        <div class="mono-tag">// TECHNOLOGIES</div>
+                        <div class="tag">Platforms & Tools</div>
                         <div class="tech-grid">
                             <div class="tech-category">
-                                <h4>Frontend / UI</h4>
-                                <span>HTML, CSS, JavaScript, React, MERN</span>
+                                <h4>Paid Channels</h4>
+                                <span>Meta Ads, Google Ads, YouTube, LinkedIn</span>
                             </div>
                             <div class="tech-category">
-                                <h4>Backend / DB</h4>
-                                <span>Node.js, PHP, MongoDB, MySQL</span>
+                                <h4>Automation & CRM</h4>
+                                <span>n8n, ActiveCampaign, HubSpot, Zapier</span>
                             </div>
                             <div class="tech-category">
-                                <h4>Automation & Apps</h4>
-                                <span>n8n, Android, WordPress</span>
+                                <h4>Analytics</h4>
+                                <span>GA4, GTM, Lead qualification engines</span>
                             </div>
                         </div>
                     </div>
@@ -394,44 +546,41 @@
             </div>
         </section>
 
-        <!-- Direct Contact Section -->
-        <section id="contact" class="contact-section scroll-reveal">
+        <!-- ========== CONTACT ========== -->
+        <section id="contact" class="contact-section container scroll-reveal">
             <div class="contact-card">
                 <div class="contact-grid">
                     <div class="contact-info">
-                        <div class="mono-tag">// GET IN TOUCH</div>
-                        <h2 class="contact-title">Let's build something practical.</h2>
+                        <div class="tag">Get in Touch</div>
+                        <h2 class="contact-title">Have a brand to build or a market to win?</h2>
                         <p class="contact-subtitle">
-                            If you have operational bottlenecks to automate, internal software to develop, or a product to get to market, let's look at the numbers.
+                            Whether you're launching a D2C brand, scaling performance campaigns, or building automated growth systems — let's talk.
                         </p>
-                        
                         <div class="email-box">
                             <div class="email-label">Direct Email</div>
                             <div class="email-row">
                                 <span class="email-address" id="email-address">sourav@adsvise.in</span>
-                                <button class="btn-copy" id="btn-copy" aria-label="Copy email address">
+                                <button class="btn-copy" id="btn-copy" aria-label="Copy email">
                                     <span class="copy-text">Copy</span>
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
                                 </button>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Direct Contact Form -->
                     <div class="contact-form-wrapper">
                         <form id="contact-form" class="contact-form">
                             <input type="hidden" name="access_key" value="825d1400-b17a-4425-b0b4-1989341cbf37">
                             <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" required placeholder="Your name">
+                                <label for="name">Name / Company</label>
+                                <input type="text" id="name" name="name" required placeholder="Your name or organization">
                             </div>
                             <div class="form-group">
                                 <label for="email">Business Email</label>
-                                <input type="email" id="email" name="email" required placeholder="your@company.com">
+                                <input type="email" id="email" name="email" required placeholder="you@company.com">
                             </div>
                             <div class="form-group">
-                                <label for="message">What bottleneck are you solving?</label>
-                                <textarea id="message" name="message" rows="4" required placeholder="Describe the workflow or problem you need to automate or build."></textarea>
+                                <label for="message">What are you building?</label>
+                                <textarea id="message" name="message" rows="4" required placeholder="Tell me about your brand, audience, or growth challenge."></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary btn-submit">Send Inquiry</button>
                         </form>
@@ -444,19 +593,14 @@
     <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-container">
-            <div class="footer-copy">
-                &copy; 2026 Sourav Sarkar. All rights reserved. Focus on outcomes.
-            </div>
+            <div class="footer-copy">&copy; 2026 Sourav Sarkar. Brand Strategy & Growth Marketing.</div>
             <div class="footer-links">
-                <span class="mono-label">LATENCY // 12ms</span>
-                <span class="mono-label">LOC // Sundarbans / Kolkata</span>
+                <span class="mono-label">Kolkata & Sundarbans, India</span>
             </div>
         </div>
     </footer>
 
-    <!-- Notification Toast -->
     <div id="toast" class="toast" role="alert" aria-live="assertive"></div>
-
     <script src="index.js"></script>
 </body>
 </html>

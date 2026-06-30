@@ -1,55 +1,76 @@
 document.addEventListener('DOMContentLoaded', () => {
+
     // -------------------------------------------------------------
-    // SCROLL REVEAL ANIMATION
+    // CURSOR GLOW EFFECT
     // -------------------------------------------------------------
-    const revealElements = document.querySelectorAll('.scroll-reveal');
-    
+    const cursorGlow = document.getElementById('cursor-glow');
+    if (cursorGlow && window.innerWidth > 768) {
+        document.addEventListener('mousemove', (e) => {
+            cursorGlow.style.left = e.clientX + 'px';
+            cursorGlow.style.top = e.clientY + 'px';
+        });
+    } else if (cursorGlow) {
+        cursorGlow.style.display = 'none';
+    }
+
+    // -------------------------------------------------------------
+    // STICKY HEADER — scroll styling
+    // -------------------------------------------------------------
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    // -------------------------------------------------------------
+    // SCROLL REVEAL
+    // -------------------------------------------------------------
+    const revealElements = document.querySelectorAll('.scroll-reveal, .stagger-reveal');
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                revealObserver.unobserve(entry.target); // Trigger only once
+                revealObserver.unobserve(entry.target);
             }
         });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-    revealElements.forEach(element => {
-        revealObserver.observe(element);
-    });
+    revealElements.forEach(el => revealObserver.observe(el));
 
     // -------------------------------------------------------------
-    // STATS COUNTING ANIMATION
+    // STATS — Circular Ring Animation + Count Up
     // -------------------------------------------------------------
-    const statCards = document.querySelector('.stats-section');
-    const statNums = document.querySelectorAll('.stat-num');
-    
-    const animateStats = () => {
-        statNums.forEach(num => {
-            const target = parseInt(num.getAttribute('data-val'), 10);
+    const statsSection = document.getElementById('stats-section');
+    const circumference = 2 * Math.PI * 40; // r=40
+
+    const animateRings = () => {
+        const statCards = document.querySelectorAll('.stat-card');
+        statCards.forEach(card => {
+            const pct = parseInt(card.getAttribute('data-ring-pct'), 10);
+            const fill = card.querySelector('.stat-ring-fill');
+            const offset = circumference - (pct / 100) * circumference;
+            fill.style.strokeDashoffset = offset;
+        });
+
+        // Count up numbers
+        const values = document.querySelectorAll('.stat-ring-value');
+        values.forEach(el => {
+            const target = parseInt(el.getAttribute('data-val'), 10);
+            const suffix = el.getAttribute('data-suffix') || '';
             let current = 0;
-            const duration = 1200; // ms
-            const stepTime = Math.max(Math.floor(duration / target), 15);
-            
+            const duration = 1800;
+            const stepTime = Math.max(Math.floor(duration / target), 40);
+
             const timer = setInterval(() => {
                 current += Math.ceil(target / (duration / stepTime));
                 if (current >= target) {
                     current = target;
                     clearInterval(timer);
                 }
-                
-                // Add suffix back depending on value
-                if (target === 47) {
-                    num.textContent = current + '+';
-                } else if (target === 15) {
-                    num.textContent = '$' + current + 'M+';
-                } else if (target === 738) {
-                    num.textContent = current + '+';
-                } else {
-                    num.textContent = current;
-                }
+                el.textContent = current + suffix;
             }, stepTime);
         });
     };
@@ -57,43 +78,61 @@ document.addEventListener('DOMContentLoaded', () => {
     const statsObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                animateStats();
+                animateRings();
                 statsObserver.unobserve(entry.target);
             }
         });
     }, { threshold: 0.3 });
 
-    if (statCards) {
-        statsObserver.observe(statCards);
-    }
+    if (statsSection) statsObserver.observe(statsSection);
 
     // -------------------------------------------------------------
-    // PROJECT FILTERING SYSTEM
+    // SKILL BARS ANIMATION
+    // -------------------------------------------------------------
+    const skillBars = document.getElementById('skill-bars');
+    const animateSkillBars = () => {
+        const fills = document.querySelectorAll('.skill-bar-fill');
+        fills.forEach(fill => {
+            const w = fill.getAttribute('data-width');
+            fill.style.width = w + '%';
+        });
+    };
+
+    const skillObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateSkillBars();
+                skillObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+
+    if (skillBars) skillObserver.observe(skillBars);
+
+    // -------------------------------------------------------------
+    // PROJECT FILTERING
     // -------------------------------------------------------------
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
 
     filterButtons.forEach(btn => {
         btn.addEventListener('click', () => {
-            // Update active state in buttons
             filterButtons.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
             const filterValue = btn.getAttribute('data-filter');
 
-            projectCards.forEach(card => {
+            projectCards.forEach((card, i) => {
                 const categories = card.getAttribute('data-category').split(' ');
-                
                 if (filterValue === 'all' || categories.includes(filterValue)) {
                     card.classList.remove('hide');
-                    // Add subtle scaling reveal
                     card.style.opacity = '0';
-                    card.style.transform = 'scale(0.98)';
+                    card.style.transform = 'translateY(15px)';
                     setTimeout(() => {
                         card.style.opacity = '1';
-                        card.style.transform = 'scale(1)';
-                        card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-                    }, 50);
+                        card.style.transform = 'translateY(0)';
+                        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    }, i * 60);
                 } else {
                     card.classList.add('hide');
                 }
@@ -102,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // -------------------------------------------------------------
-    // EMAIL COPY TO CLIPBOARD
+    // EMAIL COPY
     // -------------------------------------------------------------
     const btnCopy = document.getElementById('btn-copy');
     const emailAddress = document.getElementById('email-address');
@@ -111,9 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const showToast = (message) => {
         toast.textContent = message;
         toast.classList.add('show');
-        setTimeout(() => {
-            toast.classList.remove('show');
-        }, 3000);
+        setTimeout(() => toast.classList.remove('show'), 3000);
     };
 
     if (btnCopy && emailAddress) {
@@ -122,28 +159,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 .then(() => {
                     const copyText = btnCopy.querySelector('.copy-text');
                     copyText.textContent = 'Copied!';
-                    btnCopy.style.borderColor = 'var(--accent)';
-                    btnCopy.style.backgroundColor = 'rgba(16, 185, 129, 0.1)';
-                    btnCopy.style.color = 'var(--accent)';
-                    
-                    showToast('Direct email address copied to clipboard.');
-                    
-                    setTimeout(() => {
-                        copyText.textContent = 'Copy';
-                        btnCopy.style.borderColor = '';
-                        btnCopy.style.backgroundColor = '';
-                        btnCopy.style.color = '';
-                    }, 2000);
+                    showToast('Email address copied.');
+                    setTimeout(() => { copyText.textContent = 'Copy'; }, 2000);
                 })
-                .catch(err => {
-                    showToast('Failed to copy email automatically.');
-                    console.error('Copy failed: ', err);
-                });
+                .catch(() => showToast('Failed to copy.'));
         });
     }
 
     // -------------------------------------------------------------
-    // DIRECT INQUIRY FORM SUBMISSION (WEB3FORMS)
+    // CONTACT FORM
     // -------------------------------------------------------------
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
@@ -151,30 +175,23 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const submitBtn = contactForm.querySelector('.btn-submit');
             const originalText = submitBtn.textContent;
-            
-            // Visual loading state
             submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
 
-            const formData = new FormData(contactForm);
-
             fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
-                body: formData
+                body: new FormData(contactForm)
             })
-            .then(response => response.json())
+            .then(r => r.json())
             .then(data => {
                 if (data.success) {
-                    showToast('Inquiry sent successfully. I will get back to you shortly.');
+                    showToast('Inquiry sent! I will get back to you.');
                     contactForm.reset();
                 } else {
-                    showToast('Failed to send: ' + (data.message || 'Error occurred.'));
+                    showToast('Failed to send: ' + (data.message || 'Error.'));
                 }
             })
-            .catch(err => {
-                showToast('Connection error. Please try again or email directly.');
-                console.error('Submission error:', err);
-            })
+            .catch(() => showToast('Connection error. Try emailing directly.'))
             .finally(() => {
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
@@ -183,36 +200,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // -------------------------------------------------------------
-    // DYNAMIC LOCAL TIME (IST) DISPLAY
+    // FOOTER LOCAL TIME
     // -------------------------------------------------------------
-    const updateLocalTime = () => {
-        const footerLinks = document.querySelector('.footer-links');
-        if (!footerLinks) return;
-
-        // Check if time label exists, if not create it
-        let timeLabel = document.getElementById('ist-time-label');
-        if (!timeLabel) {
-            timeLabel = document.createElement('span');
-            timeLabel.id = 'ist-time-label';
-            timeLabel.className = 'mono-label';
-            footerLinks.appendChild(timeLabel);
+    const updateTime = () => {
+        const links = document.querySelector('.footer-links');
+        if (!links) return;
+        let label = document.getElementById('ist-time');
+        if (!label) {
+            label = document.createElement('span');
+            label.id = 'ist-time';
+            label.className = 'mono-label';
+            links.appendChild(label);
         }
-
-        // Calculate Kolkata Time (UTC+5.5)
-        const utc = new Date().getTime() + (new Date().getTimezoneOffset() * 60000);
-        const kolkataTime = new Date(utc + (3600000 * 5.5));
-        
-        const formatOptions = {
-            hour: '2-digit',
-            minute: '2-digit',
-            second: '2-digit',
-            hour12: false
-        };
-        
-        timeLabel.textContent = `LOC TIME // ${kolkataTime.toLocaleTimeString('en-US', formatOptions)} IST`;
+        const utc = Date.now() + new Date().getTimezoneOffset() * 60000;
+        const ist = new Date(utc + 3600000 * 5.5);
+        label.textContent = ist.toLocaleTimeString('en-US', { hour:'2-digit', minute:'2-digit', hour12:false }) + ' IST';
     };
-
-    // Update time every second
-    updateLocalTime();
-    setInterval(updateLocalTime, 1000);
+    updateTime();
+    setInterval(updateTime, 1000);
 });
