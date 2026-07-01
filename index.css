@@ -811,7 +811,7 @@ p { color: var(--text-secondary); }
 
 .brands-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 1rem;
 }
 
@@ -852,6 +852,30 @@ p { color: var(--text-secondary); }
     font-size: 0.82rem;
     color: var(--text-secondary);
     line-height: 1.55;
+}
+
+/* NDA / Confidential client cards */
+.brand-card-nda {
+    border-style: dashed;
+    background: rgba(23, 23, 23, 0.6);
+}
+
+.nda-name {
+    filter: blur(4px);
+    user-select: none;
+    opacity: 0.5;
+}
+
+.nda-tag {
+    background: rgba(232, 132, 92, 0.12);
+    color: var(--accent-warm);
+    font-size: 0.55rem;
+    font-weight: 700;
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+    letter-spacing: 0.08em;
+    vertical-align: middle;
+    margin-left: 0.25rem;
 }
 
 .collab-bar {
@@ -1438,11 +1462,14 @@ p { color: var(--text-secondary); }
     .project-card { padding: 2rem; }
     .project-title { font-size: 1.3rem; }
 
-    .additional-brands-section { padding: 4rem 0; }
-    .brands-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .brand-card { padding: 1.5rem; }
-    .brand-card-top h3 { font-size: 1rem; }
-    .brand-card-desc { font-size: 0.78rem; }
+    .additional-brands-section { padding: 3.5rem 0; }
+    .brands-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+    .brand-card { padding: 1.25rem 1.5rem; }
+    .brand-card-top h3 { font-size: 0.95rem; }
+    .brand-card-desc { font-size: 0.78rem; line-height: 1.5; }
+    .brand-card-category { margin-bottom: 0.5rem; }
+    .additional-brands-intro { margin-bottom: 2rem; }
+    .additional-brands-intro p { font-size: 0.88rem; }
 
     .collab-bar {
         flex-direction: column;
@@ -1498,7 +1525,8 @@ p { color: var(--text-secondary); }
     .project-desc { font-size: 0.88rem; }
     .outcome-list { font-size: 0.82rem; }
 
-    .brands-grid { grid-template-columns: 1fr; }
+    .brands-grid { grid-template-columns: 1fr; gap: 0.6rem; }
+    .brand-card { padding: 1rem 1.25rem; }
 
     .skill-bar-name { font-size: 0.78rem; }
     .skill-bar-pct { font-size: 0.7rem; }
