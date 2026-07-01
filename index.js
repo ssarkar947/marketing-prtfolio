@@ -26,6 +26,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // -------------------------------------------------------------
+    // MOBILE HAMBURGER MENU
+    // -------------------------------------------------------------
+    const hamburger = document.getElementById('hamburger');
+    const mainNav = document.getElementById('main-nav');
+    const navOverlay = document.getElementById('nav-overlay');
+
+    const toggleMenu = () => {
+        const isOpen = mainNav.classList.toggle('open');
+        hamburger.classList.toggle('active');
+        navOverlay.classList.toggle('active');
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+    };
+
+    if (hamburger) {
+        hamburger.addEventListener('click', toggleMenu);
+    }
+    if (navOverlay) {
+        navOverlay.addEventListener('click', toggleMenu);
+    }
+
+    // Close menu when a nav link is clicked
+    document.querySelectorAll('.main-nav .nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            if (mainNav.classList.contains('open')) {
+                toggleMenu();
+            }
+        });
+    });
+
+    // -------------------------------------------------------------
     // SCROLL REVEAL
     // -------------------------------------------------------------
     const revealElements = document.querySelectorAll('.scroll-reveal, .stagger-reveal');
